@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
+import ReactWork from '../ReactWork/ReactWork';
+
 
 const Products = () => {
   const [products,setProducts] =useState([]) 
@@ -28,11 +30,14 @@ const Products = () => {
          const randomElement = Math.floor(Math.random() * newCart.length);
          console.log(cart[randomElement])
          setRandomCart(cart[randomElement])
+         const newCart1=[];
+         setCart(newCart1)
       }
     return (
         <div className='container'>
+            <h4 className='p-4'>Watch Store</h4>
         <div className='product  row row-cols-1 row-cols-md-2 g-4' >
-     <div className="col-9">
+     <div className="col-lg-9 col-sm-12 order-lg-1 order-1">
          <div className='product row row-cols-1 row-cols-md-2 g-4' >
         {    
         products.map(product=><Product handleCart={handleCart} key={product.id} product={product}></Product>)
@@ -42,7 +47,8 @@ const Products = () => {
             </div>
            </div>
 
-            <div className="col-3">
+            <div className="col-lg-3 col-sm-12  order-lg-2 order-first  
+            ">
         <div className="card">
             {
             <Cart cart={cart} random={random} handleRandomSelect={handleRandomSelect} handleChooseAgain={handleChooseAgain}></Cart>
@@ -51,6 +57,7 @@ const Products = () => {
         </div>
             </div>
         </div>
+       <ReactWork></ReactWork>
         </div>
     );
 };

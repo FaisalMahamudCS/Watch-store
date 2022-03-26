@@ -4,3 +4,11 @@
     height: 15vw;
     object-fit: cover;
 }
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato&family=Montserrat:wght@400;600;700&family=Poppins:wght@400;500&family=Roboto:wght@500&family=Yeseva+One&display=swap');
+
+div{
+    font-family: 'Poppins', sans-serif;
+}
+.carts{
+    background-color:rgb(118, 160, 33);
+}
