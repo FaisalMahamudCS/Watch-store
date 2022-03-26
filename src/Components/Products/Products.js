@@ -28,11 +28,11 @@ const Products = () => {
       
        const [random,setRandomCart]=useState([]);
       const  handleRandomSelect =()=>{
-          const carts=[];
+         
           let newCart=[];
          cart.map(cart=>newCart.push(cart.id))
          const randomElement = Math.floor(Math.random() * newCart.length);
-         console.log(cart[randomElement])
+    // console.log(cart[randomElement])
          setRandomCart(cart[randomElement])
          const newCart1=[];
          setCart(newCart1)

@@ -2,3 +2,6 @@
     background-color:rgb(19, 10, 10);
     background: #021a0cd3;
 }
+.cart{
+    position:sticky;
+}
