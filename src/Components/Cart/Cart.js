@@ -7,6 +7,7 @@ const Cart = (props) => {
    
     return (
         <div className='cart'>
+       <h5> Selected Watch</h5>
         <div className='card  p-2 border-rounded'>
             <div className=" mt-2 p-2 border-rounded">
             {

@@ -46,7 +46,7 @@ const Products = () => {
     const cartKey={id:233};
     return (
         <div className='container'>
-            <h4 className='p-4'>Watch Store</h4>
+            <h4 className='p-4'>Watches Store</h4>
         <div className='product  row row-cols-1 row-cols-md-2 g-4' >
      <div className="col-lg-9 col-sm-12 order-lg-1 order-1">
          <div className='product row row-cols-1 row-cols-md-2 g-4' >
@@ -60,7 +60,9 @@ const Products = () => {
 
             <div className="col-lg-3 col-sm-12  order-lg-2 order-first  
             ">
-        <div className="card">
+        <div className="card p-2">
+       
+
             {
             <Cart key={cartKey.id} cart={cart} random={random} handleRandomSelect={handleRandomSelect} handleChooseAgain={handleChooseAgain}></Cart>
             }
