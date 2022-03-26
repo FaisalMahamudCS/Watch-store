@@ -20,15 +20,18 @@ const Products = () => {
            const newCart=[];
            setCart(newCart)
        }
+       const [random,setRandomCart]=useState([]);
       const  handleRandomSelect =()=>{
           const carts=[];
           let newCart=[];
          cart.map(cart=>newCart.push(cart.id))
          const randomElement = Math.floor(Math.random() * newCart.length);
          console.log(cart[randomElement])
+         setRandomCart(cart[randomElement])
       }
     return (
-        <div className='product row row-cols-1 row-cols-md-2 g-4' >
+        <div className='container'>
+        <div className='product  row row-cols-1 row-cols-md-2 g-4' >
      <div className="col-9">
          <div className='product row row-cols-1 row-cols-md-2 g-4' >
         {    
@@ -42,12 +45,12 @@ const Products = () => {
             <div className="col-3">
         <div className="card">
             {
-                cart.map(cart=><Cart cart={cart}></Cart>)
+            <Cart cart={cart} random={random} handleRandomSelect={handleRandomSelect} handleChooseAgain={handleChooseAgain}></Cart>
             }
-            <button className='btn btn-danger'  onClick={handleRandomSelect} >Choose For me</button>
-           <button className='btn btn-danger' onClick={handleChooseAgain} >Choose Again</button>
+           
         </div>
             </div>
+        </div>
         </div>
     );
 };

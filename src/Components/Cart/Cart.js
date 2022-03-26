@@ -1,11 +1,18 @@
 import React from 'react';
 
 const Cart = (props) => {
-    const {name}=props.cart;
+    const {cart}=props;
+    
+   
     return (
         <div>
-            <p>{name}</p>
-           
+            {
+                cart.map(cart =><p>{cart.name}</p>)
+            
+            }
+            <p>{props.random.name}</p>
+             <button className='btn btn-danger'  onClick={()=> props.handleRandomSelect()} >Choose For me</button> 
+           <button className='btn btn-danger' onClick={()=>props.handleChooseAgain()} >Choose Again</button>
 
         </div>
     );
