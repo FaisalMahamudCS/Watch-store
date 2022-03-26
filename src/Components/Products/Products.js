@@ -16,14 +16,16 @@ const Products = () => {
   
   const [cart,setCart]=useState([]);
     const handleCart=(product)=>{
-        console.log(product)
+    
         const newCart=[...cart,product];
+        if(newCart.length >4){
+            alert('cannot addeded more than 4')
+        }
+        else{
         setCart(newCart);
+        }
        } 
-       const handleChooseAgain=()=>{
-           const newCart=[];
-           setCart(newCart)
-       }
+      
        const [random,setRandomCart]=useState([]);
       const  handleRandomSelect =()=>{
           const carts=[];
@@ -35,6 +37,13 @@ const Products = () => {
          const newCart1=[];
          setCart(newCart1)
       }
+
+      const handleChooseAgain=()=>{
+        const newCart=[];
+        setCart(newCart)
+        setRandomCart(newCart)
+    }
+    const cartKey={id:233};
     return (
         <div className='container'>
             <h4 className='p-4'>Watch Store</h4>
@@ -53,7 +62,7 @@ const Products = () => {
             ">
         <div className="card">
             {
-            <Cart cart={cart} random={random} handleRandomSelect={handleRandomSelect} handleChooseAgain={handleChooseAgain}></Cart>
+            <Cart key={cartKey.id} cart={cart} random={random} handleRandomSelect={handleRandomSelect} handleChooseAgain={handleChooseAgain}></Cart>
             }
            
         </div>
