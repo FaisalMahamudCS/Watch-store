@@ -11,4 +11,14 @@ div{
 }
 .carts{
     background-color:rgb(19, 10, 10);
+    
+        width:100%;
+        background: #021a0cd3;
+        border:none;
+        border-radius: 0px 0px 8px 8px ;
+        position:absolute;
+    
+        left:0;
+        bottom:0;
+    
 }
