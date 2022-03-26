@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
 import ReactWork from '../ReactWork/ReactWork';
+import StateProps from '../StateProps/StateProps';
+import UseStates from '../UseStates/UseStates';
 
 
 const Products = () => {
@@ -58,6 +60,8 @@ const Products = () => {
             </div>
         </div>
        <ReactWork></ReactWork>
+       <StateProps></StateProps>
+       <UseStates></UseStates>
         </div>
     );
 };
